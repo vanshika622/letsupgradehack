@@ -9,20 +9,20 @@ int main()
     for(int i=0;i<n;i++){
       cin>>arr[i];
     }
-    const int N =1e6+2;
+    const int N =n+1;
     bool check[N];
     for(int i=0;i<N;i++){
         check[i]=false;
     }
     for(int i=0;i<n;i++){
-        if(arr[i]<0&& arr[i]<=n){
+        if(arr[i]>0 && arr[i]<=n){
             check[arr[i]]=true;
         }
     }
     int ans=-1;
-    for(int i=0;i<N;i++){
+    for(int i=1;i<=n;i++){
         if(check[i]==false){
-            ans=i+1;
+            ans=i;
             break;
         }
     }
