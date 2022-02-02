@@ -23,9 +23,10 @@ int main()
     for(int i=1;i<=n;i++){
         if(check[i]==false){
             ans=i;
+            cout<<ans<<endl;
             break;
         }
     }
-    cout<<ans<<endl;
+    cout<<n+1<<endl;
     return 0;
 }
